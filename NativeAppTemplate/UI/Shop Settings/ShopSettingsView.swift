@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import sharedKit
+import analyticsKit
 
 struct ShopSettingsView: View {
   @Environment(DataManager.self) private var dataManager
@@ -14,7 +14,10 @@ struct ShopSettingsView: View {
   @Environment(MessageBus.self) private var messageBus
   @State private var viewModel: ShopSettingsViewModel
   
-  private let analyticsTracker = KoinHelper().getAnalyticsTracker()
+  private let analyticsTracker: AnalyticsTracker = {
+    print("[KMP] Instantiating AnalyticsTracker in ShopSettingsView")
+    return KoinHelper().getAnalyticsTracker()
+  }()
   
   init(viewModel: ShopSettingsViewModel) {
     self.viewModel = viewModel
