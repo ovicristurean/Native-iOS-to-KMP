@@ -171,6 +171,7 @@
 		01EE363E29A6DCEB009BCD9D /* ShopkeeperEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE363D29A6DCEB009BCD9D /* ShopkeeperEditView.swift */; };
 		01FA23A12B00CE5700F1D446 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA23A02B00CE5700F1D446 /* MailView.swift */; };
 		01FC03E22B3329B700E6CD8E /* NeedAppUpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC03E12B3329B700E6CD8E /* NeedAppUpdatesView.swift */; };
+		D00060AA2F4864B800132B08 /* sharedKit in Frameworks */ = {isa = PBXBuildFile; productRef = D00060A92F4864B800132B08 /* sharedKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +367,7 @@
 				012009F8299F1E190078A1F9 /* Collections in Frameworks */,
 				012009FA299F1E190078A1F9 /* DequeModule in Frameworks */,
 				0172030225A9634F008FD63B /* SwiftyJSON in Frameworks */,
+				D00060AA2F4864B800132B08 /* sharedKit in Frameworks */,
 				0182D37025B258A7001E881D /* KeychainAccess in Frameworks */,
 			);
 		};
@@ -873,6 +875,7 @@
 				012009F7299F1E190078A1F9 /* Collections */,
 				012009F9299F1E190078A1F9 /* DequeModule */,
 				012009FB299F1E190078A1F9 /* OrderedCollections */,
+				D00060A92F4864B800132B08 /* sharedKit */,
 			);
 			productName = MyTurnTagCreator;
 			productReference = 011F6DED259EF16400BED22E /* NativeAppTemplate.app */;
@@ -931,6 +934,7 @@
 				0172030025A9634F008FD63B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				0182D36E25B258A7001E881D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				012009F6299F1E190078A1F9 /* XCRemoteSwiftPackageReference "swift-collections" */,
+				D00060412F48643800132B08 /* XCLocalSwiftPackageReference "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/analyticsKitPackage" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 011F6DEE259EF16400BED22E /* Products */;
@@ -1564,6 +1568,13 @@
 		};
 /* End XCConfigurationList section */
 
+/* Begin XCLocalSwiftPackageReference section */
+		D00060412F48643800132B08 /* XCLocalSwiftPackageReference "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/analyticsKitPackage" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/analyticsKitPackage";
+		};
+/* End XCLocalSwiftPackageReference section */
+
 /* Begin XCRemoteSwiftPackageReference section */
 		012009F6299F1E190078A1F9 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1616,6 +1627,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0182D36E25B258A7001E881D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		D00060A92F4864B800132B08 /* sharedKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D00060412F48643800132B08 /* XCLocalSwiftPackageReference "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/analyticsKitPackage" */;
+			productName = sharedKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

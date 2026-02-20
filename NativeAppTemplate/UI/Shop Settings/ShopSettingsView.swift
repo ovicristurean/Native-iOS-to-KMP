@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import sharedKit
 
 struct ShopSettingsView: View {
   @Environment(DataManager.self) private var dataManager
   @Environment(\.dismiss) private var dismiss
   @Environment(MessageBus.self) private var messageBus
   @State private var viewModel: ShopSettingsViewModel
+  
+  private let analyticsTracker = KoinHelper().getAnalyticsTracker()
   
   init(viewModel: ShopSettingsViewModel) {
     self.viewModel = viewModel
@@ -28,6 +31,7 @@ extension ShopSettingsView {
         }
       }
       .task {
+        analyticsTracker.trackVisit(shopId: viewModel.shopId)
         reload()
       }
   }

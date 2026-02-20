@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 import TipKit
+import sharedKit
 
 private struct SessionControllerKey: EnvironmentKey {
   static let defaultValue: any SessionControllerProtocol = MainActor.assumeIsolated {
@@ -67,6 +68,9 @@ struct App {
   private var messageBus: MessageBus
 
   @MainActor init() {
+    // Initialize KMP/Koin
+    KoinHelperKt.doInitKoinIos()
+    
     // setup objects
     let nativeAppTemplateObjects = App.objects
     loginRepository = nativeAppTemplateObjects.loginRepository
