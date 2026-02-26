@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import TipKit
-import analyticsKit
+import AnalyticsKit
 
 private struct SessionControllerKey: EnvironmentKey {
   static let defaultValue: any SessionControllerProtocol = MainActor.assumeIsolated {
@@ -68,10 +68,8 @@ struct App {
   private var messageBus: MessageBus
 
   @MainActor init() {
-    // Initialize KMP/Koin
-    print("[KMP] Calling doInitKoinIos() from App.swift")
-    KoinHelperKt.doInitKoinIos()
-    print("[KMP] Finished doInitKoinIos() in App.swift")
+    // Initialize AnalyticsKit before any other objects to ensure it's ready for use
+    AnalyticsProviderKt.doInitAnalyticsKit()
     
     // setup objects
     let nativeAppTemplateObjects = App.objects

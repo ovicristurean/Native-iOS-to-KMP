@@ -171,7 +171,7 @@
 		01EE363E29A6DCEB009BCD9D /* ShopkeeperEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01EE363D29A6DCEB009BCD9D /* ShopkeeperEditView.swift */; };
 		01FA23A12B00CE5700F1D446 /* MailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FA23A02B00CE5700F1D446 /* MailView.swift */; };
 		01FC03E22B3329B700E6CD8E /* NeedAppUpdatesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01FC03E12B3329B700E6CD8E /* NeedAppUpdatesView.swift */; };
-		D0C26F212F48BA5A008EA8C8 /* analyticsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D0C26F202F48BA5A008EA8C8 /* analyticsKit */; };
+		D06466012F50A448001DAD40 /* AnalyticsKit in Frameworks */ = {isa = PBXBuildFile; productRef = D06466002F50A448001DAD40 /* AnalyticsKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -363,11 +363,11 @@
 		011F6DEA259EF16400BED22E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				D06466012F50A448001DAD40 /* AnalyticsKit in Frameworks */,
 				012009FC299F1E190078A1F9 /* OrderedCollections in Frameworks */,
 				012009F8299F1E190078A1F9 /* Collections in Frameworks */,
 				012009FA299F1E190078A1F9 /* DequeModule in Frameworks */,
 				0172030225A9634F008FD63B /* SwiftyJSON in Frameworks */,
-				D0C26F212F48BA5A008EA8C8 /* analyticsKit in Frameworks */,
 				0182D37025B258A7001E881D /* KeychainAccess in Frameworks */,
 			);
 		};
@@ -875,7 +875,7 @@
 				012009F7299F1E190078A1F9 /* Collections */,
 				012009F9299F1E190078A1F9 /* DequeModule */,
 				012009FB299F1E190078A1F9 /* OrderedCollections */,
-				D0C26F202F48BA5A008EA8C8 /* analyticsKit */,
+				D06466002F50A448001DAD40 /* AnalyticsKit */,
 			);
 			productName = MyTurnTagCreator;
 			productReference = 011F6DED259EF16400BED22E /* NativeAppTemplate.app */;
@@ -934,7 +934,7 @@
 				0172030025A9634F008FD63B /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				0182D36E25B258A7001E881D /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				012009F6299F1E190078A1F9 /* XCRemoteSwiftPackageReference "swift-collections" */,
-				D0C26F1F2F48BA4F008EA8C8 /* XCLocalSwiftPackageReference "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/AnalyticsKit" */,
+				D073E0032F509F6F0058EC7F /* XCRemoteSwiftPackageReference "AnalyticsKit" */,
 			);
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 011F6DEE259EF16400BED22E /* Products */;
@@ -1568,13 +1568,6 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		D0C26F1F2F48BA4F008EA8C8 /* XCLocalSwiftPackageReference "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/AnalyticsKit" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/AnalyticsKit";
-		};
-/* End XCLocalSwiftPackageReference section */
-
 /* Begin XCRemoteSwiftPackageReference section */
 		012009F6299F1E190078A1F9 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
@@ -1598,6 +1591,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 4.2.2;
+			};
+		};
+		D073E0032F509F6F0058EC7F /* XCRemoteSwiftPackageReference "AnalyticsKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ovicristurean/AnalyticsKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -1628,10 +1629,10 @@
 			package = 0182D36E25B258A7001E881D /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
-		D0C26F202F48BA5A008EA8C8 /* analyticsKit */ = {
+		D06466002F50A448001DAD40 /* AnalyticsKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = D0C26F1F2F48BA4F008EA8C8 /* XCLocalSwiftPackageReference "../../../AndroidStudioProjects/native-android-to-kmp/Native-Android-to-KMP/AnalyticsKit" */;
-			productName = analyticsKit;
+			package = D073E0032F509F6F0058EC7F /* XCRemoteSwiftPackageReference "AnalyticsKit" */;
+			productName = AnalyticsKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

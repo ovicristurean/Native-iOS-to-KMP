@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import analyticsKit
+import AnalyticsKit
 
 struct ShopSettingsView: View {
   @Environment(DataManager.self) private var dataManager
@@ -16,7 +16,7 @@ struct ShopSettingsView: View {
   
   private let analyticsTracker: AnalyticsTracker = {
     print("[KMP] Instantiating AnalyticsTracker in ShopSettingsView")
-    return KoinHelper().getAnalyticsTracker()
+    return AnalyticsProvider().getAnalyticsTracker()
   }()
   
   init(viewModel: ShopSettingsViewModel) {
